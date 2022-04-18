@@ -108,6 +108,7 @@ function move() {
       yPos + bird.height >= canvas.height - fg.height
     ) {
       localStorage.setItem('count', score >= storage ? score : storage);
+      bool = false;
       location.reload();
     }
 
