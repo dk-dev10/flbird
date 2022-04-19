@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+}
+
+.center {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#start {
+  top: 45%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+
+  border: 1px solid #fff;
+  background: none;
+  font-size: 23px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 5px;
+}
