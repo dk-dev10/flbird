@@ -48,6 +48,7 @@ const storage = localStorage.getItem('count');
 
 // При нажатие кнопки взлетает на вверх
 document.addEventListener('keydown', moveUp);
+document.addEventListener('touchstart', moveUp);
 
 function moveUp() {
   if (bool) {
