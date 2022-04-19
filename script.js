@@ -51,7 +51,11 @@ document.addEventListener('keydown', moveUp);
 
 function moveUp() {
   if (bool) {
-    yPos -= 25;
+    for (let i = 0; i < 26; i++) {
+      setTimeout(() => {
+        yPos -= 1;
+      }, 120);
+    }
     fly.play();
   }
 }
