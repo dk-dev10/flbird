@@ -26,6 +26,9 @@ const gap = 90;
 
 // Текущий счёт
 let score = 0;
+// Получаем рекордный счёт
+const storage = localStorage.getItem('count');
+!storage && localStorage.setItem('count', 0);
 
 // Создание блоков
 const pipe = [];
@@ -41,10 +44,6 @@ btn.addEventListener('click', () => {
   bool = true;
   btn.remove();
 });
-
-// Получаем рекордный счёт
-const storage = localStorage.getItem('count');
-!storage && localStorage.setItem('count', 0);
 
 // При нажатие кнопки взлетает на вверх
 document.addEventListener('keydown', moveUp);
@@ -73,8 +72,6 @@ function draw() {
   if (bool) {
     move();
   }
-
-  console.log();
 
   ctx.drawImage(fg, 0, canvas.height - fg.height);
 
